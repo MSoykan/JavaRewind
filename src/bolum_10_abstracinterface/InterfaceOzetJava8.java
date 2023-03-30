@@ -1,5 +1,7 @@
 package bolum_10_abstracinterface;
 
+import bolum_10_abstracinterface.acess_modifiers.ProtectedKullanimi;
+
 public class InterfaceOzetJava8 {
     public static void main(String[] args) {
         
@@ -28,13 +30,15 @@ abstract interface InterfaceA{// abstract yazmamıza gerek yok.
     }
 }
 
+class Soykan extends ProtectedKullanimi{}
+
 class SinifA implements InterfaceA{
 
     static{
 
     }
     {
-        
+
     }
 
     @Override
