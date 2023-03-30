@@ -30,7 +30,10 @@ abstract interface InterfaceA{// abstract yazmamıza gerek yok.
     }
 }
 
-class Soykan extends ProtectedKullanimi{}
+class Soykan extends ProtectedKullanimi{
+
+    
+}
 
 class SinifA implements InterfaceA{
 

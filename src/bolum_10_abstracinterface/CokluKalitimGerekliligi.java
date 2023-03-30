@@ -1,10 +1,14 @@
 package bolum_10_abstracinterface;
 
+import bolum_10_abstracinterface.acess_modifiers.ErisimBelirleyiciler;
 import java.util.ArrayList;
 
-public class CokluKalitimGerekliligi {
+public class CokluKalitimGerekliligi extends ErisimBelirleyiciler {
     
     public static void main(String[] args) {
+        System.out.println("Bakalı mbasityor mu?");
+        CokluKalitimGerekliligi ck = new CokluKalitimGerekliligi();
+        ck.bastir();
         MuslumBaba muslum=new MuslumBaba();
         PopSarkiciÖzellikleri popSarkici1 = new Tarkan();
         PopSarkiciÖzellikleri popSarkici2 = new Hadise();
@@ -21,7 +25,11 @@ public class CokluKalitimGerekliligi {
         popSarkici1.adiniSoyle();
         // ArabeskSarkiciOzellikleri.yas=50;
     }
+    public void bastir(){
+        System.out.println(protectedDegisken);
+    }
 }
+
 interface Kisi{
     void yemekYe();
     void sporYap();

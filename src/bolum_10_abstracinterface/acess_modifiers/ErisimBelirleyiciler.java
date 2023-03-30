@@ -4,5 +4,7 @@ public class ErisimBelirleyiciler {
     public static void main(String[] args) {
         PrivateKullanimi pk= new PrivateKullanimi();
         DefaultveyaPackage dp = new DefaultveyaPackage();
+        dp.metot();
     }
+    protected int protectedDegisken=5;
 }
