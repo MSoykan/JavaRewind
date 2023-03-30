@@ -20,9 +20,6 @@ class B {
 
 }
 
-class C extends B,A{
-    
-}
 
 interface Yenilebilir{//Sadece metot tanımlanıyor.İçerde foknsiyonun içi doldurulmaz.
     void yemekSekli();

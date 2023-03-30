@@ -17,14 +17,17 @@ public class CokluKalitimGerekliligi {
         sarkicilar.add(popSarkici1);
         sarkicilar.add(popSarkici2);
 
-        popSarkici1.sahnedeDansEt();    
-
+        popSarkici1.sahnedeDansEt();
+        popSarkici1.adiniSoyle();
         // ArabeskSarkiciOzellikleri.yas=50;
     }
 }
 interface Kisi{
     void yemekYe();
     void sporYap();
+    default void adiniSoyle(){
+        System.out.println("Ben kişi interfaceiyim.");
+    }
 }
 
 interface OgrenciOzellikleri extends Kisi,UniversiteOgrencisi{ // Interface interface'i extend edebilir.
@@ -61,6 +64,12 @@ class Student implements OgrenciOzellikleri{
         // TODO Auto-generated method stub
         
     }
+
+    @Override
+    public void finallereCalis() {
+        // TODO Auto-generated method stub
+        
+    }
     
 }
 
@@ -75,7 +84,7 @@ interface ArabeskSarkiciOzellikleri{ // NOT: INTERFACELER BIRBIRINI EXTEND EDEBI
     final static int yas = 50; // Direk arabesks....leri.yas ile erisbilirsin
     
 }
-interface PopSarkiciÖzellikleri{
+interface PopSarkiciÖzellikleri extends Kisi{
     void sahnedeDansEt();
     void duetYap();
 }
@@ -84,13 +93,23 @@ class Tarkan implements PopSarkiciÖzellikleri{
     @Override
     public void sahnedeDansEt() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sahnedeDansEt'");
     }
 
     @Override
     public void duetYap() {
+
+    }
+
+    @Override
+    public void sporYap() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'duetYap'");
+        
+    }
+
+    @Override
+    public void yemekYe() {
+        // TODO Auto-generated method stub
+        
     }
 
 }
@@ -99,14 +118,22 @@ class Hadise implements PopSarkiciÖzellikleri{
 
     @Override
     public void sahnedeDansEt() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sahnedeDansEt'");
     }
 
     @Override
     public void duetYap() {
+    }
+
+    @Override
+    public void sporYap() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'duetYap'");
+        
+    }
+
+    @Override
+    public void yemekYe() {
+        // TODO Auto-generated method stub
+        
     }
 
 }
@@ -120,14 +147,10 @@ class ArabeskSarkici extends Sarkici{
 
     @Override
     public void yemekYe() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'yemekYe'");
     }
 
     @Override
     public void sporYap() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sporYap'");
     }
     
 }
@@ -136,19 +159,16 @@ class PopSarkici extends Sarkici{
 
     @Override
     void sarkiSoyle() {
-        System.out.println("Pop şarkıcı şarkı söylüyor.");
+        System.out.println("pop şşarkıcı şarkı söylüyor.");
     }
 
     @Override
     public void yemekYe() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'yemekYe'");
     }
 
     @Override
     public void sporYap() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sporYap'");
     }
 
 }
@@ -167,8 +187,18 @@ class MuslumBaba implements ArabeskSarkiciOzellikleri,PopSarkiciÖzellikleri{
 
     @Override
     public void duetYap() {
+    }
+
+    @Override
+    public void sporYap() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'duetYap'");
+        
+    }
+
+    @Override
+    public void yemekYe() {
+        // TODO Auto-generated method stub
+        
     }
 
 }
