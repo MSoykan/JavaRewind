@@ -18,11 +18,50 @@ public class CokluKalitimGerekliligi {
         sarkicilar.add(popSarkici2);
 
         popSarkici1.sahnedeDansEt();    
+
+        // ArabeskSarkiciOzellikleri.yas=50;
     }
 }
 interface Kisi{
     void yemekYe();
     void sporYap();
+}
+
+interface OgrenciOzellikleri extends Kisi,UniversiteOgrencisi{ // Interface interface'i extend edebilir.
+    void dersCalis();
+    void okulaGit();
+}
+
+interface UniversiteOgrencisi{
+    void finallereCalis();
+}
+
+class Student implements OgrenciOzellikleri{
+
+    @Override
+    public void dersCalis() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void okulaGit() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void sporYap() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void yemekYe() {
+        // TODO Auto-generated method stub
+        
+    }
+    
 }
 
 abstract class Sarkici implements Kisi { // ABSTRACT CLASS INTERFACE IMPLEMENT EDERSE FONKSIYONLARI GERÇEKLESTIRMEZ
@@ -31,8 +70,9 @@ abstract class Sarkici implements Kisi { // ABSTRACT CLASS INTERFACE IMPLEMENT E
     abstract void sarkiSoyle();
 }
 
-interface ArabeskSarkiciOzellikleri{
+interface ArabeskSarkiciOzellikleri{ // NOT: INTERFACELER BIRBIRINI EXTEND EDEBILIR
     void sahnedeSigarIc();
+    final static int yas = 50; // Direk arabesks....leri.yas ile erisbilirsin
     
 }
 interface PopSarkiciÖzellikleri{
