@@ -1,5 +1,7 @@
 package bolum_11_generics;
 
+import java.util.ArrayList;
+
 public class GenericsKavrami {
     
     public static void main(String[] args) {
@@ -17,5 +19,16 @@ public class GenericsKavrami {
 
         GenericDiziYazdir<Integer> integergGenericDiziYazdir= new GenericDiziYazdir<Integer>();
         integergGenericDiziYazdir.yazdir(sayilar);
+
+        ArrayList<String> listem=new ArrayList();
+        listem.add("ankara");
+        listem.add("bursa");
+        listem.add("izmir");
+        listem.add("mugla");
+    //    listem.add(1);
+     //   listem.add(true);
+        for(Object gecici : listem){
+            System.out.println(((String)gecici).length());
+        }
     }
 }
