@@ -6,4 +6,9 @@ public class SehirVeterinerlikleri {
 
 
     private ArrayList<Veteriner> sehirdekiVeterinerler;
+
+    public SehirVeterinerlikleri() {
+    }
+
+    
 }
