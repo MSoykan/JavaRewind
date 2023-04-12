@@ -1,5 +1,7 @@
 package bolum_10_abstracinterface;
 
+import bolum_10_abstracinterface.acess_modifiers.ProtectedKullanimi;
+
 public class SyoutSinifKavrami {
     
     public static void main(String[] args) {
@@ -20,16 +22,19 @@ class B {
 
 }
 
-class C extends B,A{
-    
-}
 
 interface Yenilebilir{//Sadece metot tanımlanıyor.İçerde foknsiyonun içi doldurulmaz.
     void yemekSekli();
     
 }
 
-class Elma implements Yenilebilir{
+class Elma extends ProtectedKullanimi implements Yenilebilir{
+
+
+void elmaMetotu(){
+    ProtectedKullanimi p = new ProtectedKullanimi();
+    
+}
 
     @Override
     public void yemekSekli() {
@@ -37,9 +42,12 @@ class Elma implements Yenilebilir{
         throw new UnsupportedOperationException("Unimplemented method 'yemekSekli'");
     }
 
-    void elmaMetotu(){
-
+    @Override
+    protected void protectedMetot() {
+        super.protectedMetot();
+        System.out.println(protectedDegisken);
     }
+
 }
 
 class Inek implements Yenilebilir{
